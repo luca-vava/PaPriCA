@@ -22,11 +22,11 @@ int main()
 		{
 
 			int *out = new int[size]; //allocazione array nell'heap
+			srand (time(NULL)); //randomizzazione del seed
 
 			for (int j = 0; j < size; j++)
 			{
-				srand (time(NULL));
-				out[j] = rand()%100;
+				out[j] = rand()%100; // generazione numeri pseudocasuali 
 			}
 
 			double start_time = omp_get_wtime();
